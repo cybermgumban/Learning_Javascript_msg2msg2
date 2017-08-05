@@ -4,6 +4,8 @@
 <head>
 </head>
 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
 <style type="text/css">
 	body {font-size: 1.6em;}
 	.hidden {display: none;}
@@ -21,6 +23,26 @@
 <body>
 
 <p id="sayHello"></p>
+
+<form action="/url-to-send-file">
+
+<input type="text" placeholder="testing" required/>
+<button type="submit">Submit</button>
+
+</form>
+
+<label>
+<input type="radio" name="indoor-outdoor"/>Indoor
+</label>
+<br />
+<label>
+<input type="radio" name="indoor-outdoor"/>Outdoor
+</label>
+<br />
+
+<label><input type="checkbox" name="personality" checked> ABC</label>
+
+<!--to put button up to the end of the width of the screen, add class btn-block -->
 
 </body>
 
@@ -59,6 +81,50 @@ var randStr = "A long " + "string that " + "goes on and on";
 document.write("String Length: ", randStr.length, "<br />");
 document.write("Index for \"goes\": ", randStr.indexOf("goes"), "<br />");
 
+
 </script>
+
+<script>
+  $(document).ready(function() {
+	$("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+    $("#target3").addClass("animated fadeOut");
+    $("button").removeClass("btn-default");
+	
+	$("#target1").css("color", "red");
+    $("#target4").html("<em>#target4</em>");
+	$(".btn").prop("disabled",true);
+	$("#target4").remove();
+	$("#target2").appendTo("#right-well");
+	$("#target1").parent().css("background-color","red");
+	$("#right-well").children().css("color","orange");
+	$(".target:nth-child(3)").addClass("animated bounce");
+	$(".target:even").addClass("animated shake");
+	$("body").addClass("animated hinge");
+  });
+</script>
+
+<!-- Only change code above this line. -->
+
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target" id="target1">#target1</button>
+        <button class="btn btn-default target" id="target2">#target2</button>
+        <button class="btn btn-default target" id="target3">#target3</button>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <h4>#right-well</h4>
+      <div class="well" id="right-well">
+        <button class="btn btn-default target" id="target4">#target4</button>
+        <button class="btn btn-default target" id="target5">#target5</button>
+        <button class="btn btn-default target" id="target6">#target6</button>
+      </div>
+    </div>
+  </div>
 
 </html>
