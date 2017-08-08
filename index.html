@@ -76,7 +76,7 @@ document.write("Show only 2 decimals : ", (5.5555).toFixed("2"), "<br />");
 
 document.write("Converted String: ", Number("3.14"), "<br />");
 document.write("Converted Int: ", parseInt("3.14"), "<br />");
-document.write("Converted Floar: ", parseFloat("3.14"), "<br />");
+document.write("Converted Float: ", parseFloat("3.14"), "<br />");
 
 var randStr = "A long " + "string that " + "goes on and on";
 document.write("String Length: ", randStr.length, "<br />");
@@ -106,7 +106,10 @@ document.write("Index for \"goes\": ", randStr.indexOf("goes"), "<br />");
 	$("body").addClass("animated hinge");
   });
 */  
-  
+	
+// Adding backslash
+
+document.write("This has \"double quote\"!");
 
 function showDateTime(date, time) {
 	document.write(date, " " ,time);
